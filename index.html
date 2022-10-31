@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+      <div id="dialog1", style="display: none;">
+        <p> Do you want to specify your password length and characters to be used? <br> <br> If no, we will use default value of 12 characters and all available characters (upper/lower case, numeric and all specical characters).</p>
+      </div>
+
+      <div id="dialog2", style="display: none;">
+        Please provide specifications for your password: <br>
+        <br>
+        length (integers please): <input type = "number" id = 'passwordLength'/> <br>
+        <br>
+
+        choose the type of characters included:
+        <br>
+        <input type="checkbox" id="lowerCase" name="lowerCase" value=1 checked=1>
+        <label for="lowerCase"> Lower case (a,b,c...) </label><br>
+ 
+        <input type="checkbox" id="upperCase" name="upperCase" value=1>
+        <label for="upperCase"> Upper case (A,B,C...) </label><br>
+    
+        <input type="checkbox" id="numeric" name="numeric" value=1>
+        <label for="numeric"> Numeric (1,2,3...) </label><br>
+
+        <input type="checkbox" id="specialChar" name="specialChar" value=1>
+        <label for="specialChar"> Special characters (#,@,%...) </label><br>
+
+      </div>
+
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
